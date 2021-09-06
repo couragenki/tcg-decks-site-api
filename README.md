@@ -22,6 +22,6 @@ php artisan db:seed
 php artisan serve
 ```
 
-- ブラウザでURL「localhost:8000/api」を開き起動していることを確認
+- ブラウザでURL「localhost:8000/api/article/1」を開き起動していることを確認
 
 
