@@ -3,6 +3,14 @@
 ## Laravelを使用
 - DBはMySQLを使用
 
+### 初期設定
+- phpでmysqlを使用するために「php-mysql」をインストールする
+- mysqlでデータベースを作成する
+```
+CREATE DATABASE laravel;
+```
+
+
 ### 使用方法
 - 「composer」をインストールする
 - プロジェクトを格納されているディレクトリに移動し、以下を実行する
