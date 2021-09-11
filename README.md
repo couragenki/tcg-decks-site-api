@@ -10,6 +10,13 @@
 ```
 CREATE DATABASE laravel;
 ```
+- ユーザーを作成し、権限を追加する
+```
+CREATE USER 'user_name' IDENTIFIED BY 'password';
+```
+```
+GRANT ALL ON *.* TO user_name;
+```
 
 
 ### 使用方法
