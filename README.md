@@ -25,6 +25,13 @@ GRANT ALL ON *.* TO user_name;
 composer update
 ```
 - 「.env.local」ファイルを「.env」にリネームし、DB接続情報を変更しておく
+```
+~~~
+DB_DATABASE=作成したデータベース名
+DB_USERNAME=作成したユーザー
+DB_PASSWORD=パスワード
+~~~
+```
 - 以下のコマンドを実行し、DBのテーブルとダミーデータを作成する
 ```
 php artisan migrate
