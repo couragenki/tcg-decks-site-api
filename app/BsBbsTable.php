@@ -17,4 +17,6 @@ class BsBbsTable extends Model
 
     // create_at, update_at を無効
     public $timestamps = false;
+
+    public $guraded = ['id'];
 }

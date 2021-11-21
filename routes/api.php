@@ -18,24 +18,37 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::get('/article/{kiji_num}', [App\Http\Controllers\BsBbsController::class, 'getKijiList']);
+Route::get('/article/{post_id}', [App\Http\Controllers\BsBbsController::class, 'getPosts']);
 
-Route::get('/tier', function() {
-    $deck1 = array(
-        'deckId'=> 1, 
-        'deckName'=> '機竜',
-        'deckScore'=> 9.5
-    );
-    $deck2 = array(
-        'deckId'=> 2, 
-        'deckName'=> '妖怪魔影',
-        'deckScore'=> 9
-    );
-    $deck3 = array(
-        'deckId'=> 3, 
-        'deckName'=> 'WBS',
-        'deckScore'=> 9
+Route::post('/article/{post_id}', 'BsBbsController@addPost');
+
+/*
+Route::post('/article/{kiji_num}', function(Request $request){
+    
+    $author = $request->input('author');
+    $comment = $request->input('comment');
+
+    $array = array(
+        'id' => '99',
+        'post_id' => '1',
+        'create_time' => '2021-10-09 10:01:00',
+        'comment_id' => '20',
+        'update_time' => '2021-10-09 10:01:00',
+        'author' => $author,
+        'comment' => $comment
     );
 
-    return json_encode(array($deck1, $deck2, $deck3), JSON_UNESCAPED_UNICODE);
+    $array2 = array(
+        'id' => '99',
+        'kiji_num' => '1',
+        'create_time' => '2021-10-09 10:01:00',
+        'number' => '20',
+        'update_time' => '2021-10-09 10:01:00',
+        'author' => $author,
+        'comment' => $comment
+    );
+
+    $array3 = array($array, $array2);
+    return json_encode($array3);
 });
+*/

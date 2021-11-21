@@ -14,17 +14,17 @@ class CreateBsBbsTable extends Migration
     public function up()
     {
         Schema::create('bs_bbs_table', function (Blueprint $table) {
-            $table->id();
-            $table->string('kiji_num', 8);
-            $table->integer('number');
+            $table->increments('id');
+            $table->string('post_id', 8);
+            $table->integer('comment_id');
             $table->timestamp('create_time');
             $table->timestamp('update_time');
             $table->string('author', 32);
             $table->text('comment');
 
 
-            $table->index(['kiji_num', 'number']);
-            $table->unique(['kiji_num', 'number']);
+            $table->index(['post_id', 'comment_id']);
+            $table->unique(['post_id', 'comment_id']);
         });
     }
 

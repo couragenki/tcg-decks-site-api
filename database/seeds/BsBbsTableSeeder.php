@@ -1,8 +1,7 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BsBbsTableSeeder extends Seeder
 {
@@ -17,15 +16,15 @@ class BsBbsTableSeeder extends Seeder
         for ($i = 1; $i <= 10; $i++) {
             for ($j = 1; $j <=10; $j++) {
                  $bbs = [
-                    'kiji_num' => $j,
-                    'number' => $i,
+                    'post_id' => $j,
+                    'comment_id' => $i,
                     'author' => $faker->name,
                     'comment' => $faker->realText,
                     'create_time'=> now(),
                     'update_time' => now(),
                 ];
  
-                \Illuminate\Support\Facades\DB::table('bs_bbs_table')->insert($bbs);
+                DB::table('bs_bbs_table')->insert($bbs);
             }
 
         }
